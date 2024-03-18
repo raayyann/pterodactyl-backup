@@ -15,7 +15,6 @@ This application automatically backs up your Pterodactyl server files to Google 
   3. [Create Service Account](#3-create-service-account)
   4. [Download Service Account Key](#4-download-service-account-key)
   5. [Add Access to Drive Folder](#5-add-access-to-drive-folder)
-- [Usage](#usage)
 - [Additional Notes](#additional-notes)
 
 ### Features
@@ -26,13 +25,31 @@ This application automatically backs up your Pterodactyl server files to Google 
 
 ### Installation
 
+### Installation
+
+Download from the release section [here](https://github.com/raayyann/pterodactyl-backup/releases) and select your operating system and run the following command
+
+```shell
+./pterodactyl-backup-macos # for macos
+./pterodactyl-backup-linux # for linux
+pterodactyl-backup-win.exe # for windows
+```
+
+Or using Node js and NPM
+
 1. **Node.js and npm:** Make sure you have Node.js and npm installed on your system. You can download them from the official Node.js website [https://nodejs.org/en](https://nodejs.org/en).
 2. **Clone the repository:** Clone this repository to your local machine using git. You can use a service like Github or clone it directly from the command line.
 3. **Dependencies:** Install the required dependencies by running `npm install` in the project directory.
+4. **Run the script:** Once you've configured the application, run the script using `node index.js` in the project directory.
 
 **Important:** This application requires configuration before running.
 
+- If cron is disabled, the script will perform a one-time backup.
+- If cron is enabled, the script will schedule future backups according to the cron expression.
+
 ### Configuration
+
+Run the app once and config.json should be created
 
 1. **config.json:** Edit the `config.json` file located in the project root directory.
    - `pterodactylUrl`: The URL of your Pterodactyl panel.
@@ -89,7 +106,7 @@ Fill up the service account details and click DONE
 
 **5. Add Access to Drive Folder**
 
-- Right click on the Google Drive folder and select "Share" and add the service account email to the access list.
+- Right click on the Google Drive folder and select "Share" and add the service account email to the access list as editor.
 
 ![](https://cdn.discordapp.com/attachments/868678321049829436/1219416621899186285/image.png?ex=660b393a&is=65f8c43a&hm=b07daa505a64a7331e3de8ae20948624faafacb08b3091e3e8c0d2196d4f40fd&)
 ![](https://media.discordapp.net/attachments/868678321049829436/1219416688190291968/image.png?ex=660b394a&is=65f8c44a&hm=f8bea498a554f3228ba4f45f69929b1b6bb56b43f3f286cae085ca56cebd1a13&=&format=webp&quality=lossless)
@@ -97,12 +114,6 @@ Fill up the service account details and click DONE
 Copy the folder id to config.json
 
 ![](https://media.discordapp.net/attachments/868678321049829436/1219416790778773606/image.png?ex=660b3962&is=65f8c462&hm=98fb207dd56422731e3adfc66bafed26b23452645f96a95268f19de5ede05f74&=&format=webp&quality=lossless)
-
-### Usage
-
-1. **Run the script:** Once you've configured the application, run the script using `node index.js` in the project directory.
-   - If cron is enabled, the script will perform the initial backup and schedule future backups according to the cron expression.
-   - If cron is disabled, the script will perform a one-time backup.
 
 ### Additional Notes
 
