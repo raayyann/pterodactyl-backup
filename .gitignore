@@ -3,3 +3,4 @@ credentials.json
 config.json
 data.json
 .temp/
+dist/
