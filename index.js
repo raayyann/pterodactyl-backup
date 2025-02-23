@@ -28,8 +28,8 @@ const { google } = require("googleapis");
 const cron = require("node-cron");
 const parser = require("cron-parser");
 
-const config = require("./config.json");
-const credentials = require("./credentials.json");
+const config = JSON.parse(fs.readFileSync("config.json"));
+const credentials = JSON.parse(fs.readFileSync("credentials.json"));
 const { default: axios } = require("axios");
 
 const headers = {

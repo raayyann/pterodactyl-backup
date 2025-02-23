@@ -11,6 +11,7 @@
     "cron-parser": "^4.9.0",
     "googleapis": "^134.0.0",
     "node-cron": "^3.0.3",
-    "nodejs-file-downloader": "^4.12.1"
+    "nodejs-file-downloader": "^4.12.1",
+    "pterodactyl-backup": "file:"
   }
 }
